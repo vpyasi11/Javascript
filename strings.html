@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="Hello world"
+        console.log(str);
+        var str2='hello \'world\' ';
+        var i=str2.indexOf("hello is the most common greeting")//0
+        var i=str2.indexOf("hello",10)//starts searching at 10th index returns -1
+        console.log(str2.length)
+        var i2= str2.search("is")
+        console.log(i2)
+
+        console.log(str2.slice(2,5))
+        console.log(str2.slice(10,0))
+        console.log(str2.substring(-1,-8))
+        console.log(str2.length)
+
+        var r=str2.replace("hello","Hi")
+        var v=str2.replaceAll("Hello","Hi")
+    </script>
+</body>
+</html>
