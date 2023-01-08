@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Array merge
+        var arr1=[1,2,3,4]
+        var arr2=[5,6,6,7,8]
+        var arr3=arr1.concat(arr2)
+        console.log(arr3)
+        //non destructive method
+
+        //Searching in a array
+        //indexOf method
+        console.log(arr3.indexOf(6))
+        console.log(arr3.lastIndexOf(20))
+        console.log(arr3.indexOf())//return -1 if not found
+    
+        //include method (boolean)
+        console.log(arr3.includes(2))//true
+        //console.log(element,startindex)
+
+        //find method : only first value
+        
+        var ans=arr3.find(function(item){
+            return item>2;
+        })
+        console.log(ans)//3
+
+        //filter method : returns all items greater
+        var ans1=arr3.filter(function(item){
+            return item>2;
+        })
+        console.log(ans1)//3,4,5,6,6,7,8
+
+        //sorting
+        console.log(arr3.sort(function(a,b){
+            return a-b;
+        }))// b-a for descending
+
+        //reversing an array
+        console.log(arr3.reverse());
+        
+        //reversing an string
+        var x="shakul"
+        y=x.split("")
+        y.reverse()
+        z=y.join("")
+        console.log(z)
+
+        //find Minimum value
+        var ar1=[21,54,1,454,9,46,54]
+        console.log(Math.max(20,65,12))
+        console.log(Math.max.apply(null,ar1))
+        console.log(Math.min.apply(null,ar1))
+
+        //map method
+        var sq=[1,2,3,4,5,6]
+        // var f1=(function(item){
+        //     return item*item
+        // })
+        // console.log(f1)
+        var result= sq.map(function(item){
+            return item*item
+        })
+        console.log(result)
+
+        //reduce method
+        var out=sq.reduce(function(a,b){
+            return a+b
+        })
+        console.log(out)
+
+        var f2= function(a,b){
+            return a+b
+        }
+        console.log(f2)
+
+        var strarr = ['a', 'n', 'u', 'j',' ', 'a']
+        var output2 = strarr.reduce(f2)
+        console.log(output2)
+
+        //converting km to miles
+        var km=[5,1,84,3,89]
+        var miles=km.map(function(a){
+            return a*1.6
+        })
+        console.log(miles)
+
+        //converting elements to uppercase 
+        let strings = ["avengers", "captain america", "ironman", "black panther"];
+        let av=strings.map(function(item){
+            return item.toUpperCase()
+        })
+        console.log(av)
+
+        //checking even no
+        var num=[1,2,3,4,5,6,7,8,9,10]
+        var even = num.reduce(function(item){
+            if(item%2==0)
+            {return item}
+        })
+        console.log(even)
+
+        var even1 = num.filter(function(item){
+            if(item%2==0)
+            {return item}
+        })
+        console.log(even1)
+         var num1=[]
+        var even3= num.map(function(item){
+            if(item%2==0)
+            {return item}
+        })
+        console.log(even3)
+
+        num.forEach(function(item){
+            if (item%2==0){
+                num1.push(item)
+            }
+        })
+        console.log(num1)
+    </script>
+</body>
+</html>

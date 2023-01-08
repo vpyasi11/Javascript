@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+      var str="chandramani";
+      var guess="_ _ _ _ _ _ _ _ _ _ _"
+      var result=""
+      
+    //   while(i<=10){
+
+        var char=prompt("Guess the word:\n"+ guess);
+        for(i=0;i<str.length;i++){
+            
+            if(char==str[i]){
+                result=guess[i*2].replaceAll("_",str[i])
+                
+            }
+        }
+        console.log(result)
+  
+        
+        
+      
+    </script>
+</body>
+</html> 
