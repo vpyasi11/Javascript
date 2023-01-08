@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("Enter activity:\n\n1. Multiplication table\n2. Reverse number\n3. Fibonacci series\n4. Factorial\n5. Star pyramid"));
+
+        switch(a){
+            case 1:
+                var x=prompt("Enter a number: ")
+                for(i=1;i<=10;i++)
+                {                    
+                    console.log(x*i)
+                }
+                break;
+
+            case 2:
+                var num=prompt("Enter a number to reverse")
+                let digit=0;
+                let reverse=0;
+                while(num){
+                    digit=num%10;
+                    reverse=(reverse*10)+digit;
+                    num=Math.floor(num/10);
+                }
+                console.log(reverse)
+                break;
+            
+            case 4:
+                var x=prompt("Enter a number: ")
+                var f=1
+                for(i=1;i<=x;i++){
+                    f=f*i
+                }
+                console.log(f)
+                break;
+            
+            case 3:
+                var x=Number(prompt("Enter the number of terms: "))
+                var f=0
+                var l=1
+                var curr=0
+                console.log(f)
+                console.log(l)
+                for(i=2;i<=x;i++){
+                    curr=f+l;
+                    f=l
+                    l=curr
+                    console.log(curr)
+                }
+                break;
+            
+            case 5:
+                var x=Number(prompt("Enter the height for pyramid: "))
+                let string="";
+                //External loop
+                for(i=1;i<=x;i++){
+                    //printing spaces
+                    for(j=1;j<=x;j++){
+                        string = string + " ";
+                    }
+                    //printing star
+                    for(k=0;k<2*i-1;k++){
+                        string+="*";
+                    }
+                    string+="\n";
+                }
+                console.log(string);
+                break;
+
+        }
+    </script>
+</body>
+</html>
