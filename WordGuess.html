@@ -8,22 +8,58 @@
 </head>
 <body>
     <script>
-      
+      window.alert("Lets play Hangman \nYou have 3 Lives")
       var str="chandramani";
-      var guess="_ _ _ _ _ _ _ _ _ _ _"
-      var result=""
+      const guess="_ _ _ _ _ _ _ _ _ _ _";
+      let result=guess.split("")
+      let count=0;
+      var flag=0;
       
-    //   while(i<=10){
+      
+      
+     while(count<3){
 
-        var char=prompt("Guess the word:\n"+ guess);
+        var char=prompt("Guess the word:\n"+ result.join(""));
         for(i=0;i<str.length;i++){
-            
+
+
             if(char==str[i]){
-                result=guess[i*2].replaceAll("_",str[i])
-                
+                result.splice(i*2,1,str[i]);
+                flag=1;
             }
+            
+           
         }
-        console.log(result)
+    if(flag==0){
+        count++;
+    }
+    else{
+        flag=0;
+    }
+
+    z=result.filter(function(item){
+            if(item==" "){
+                return ""
+            }
+            else{
+                return item
+            }
+        })
+        
+        y=z.join("")
+        
+        if(y=="chandramani"){
+            break;
+        }
+    }
+       
+        
+        if(y=="chandramani"){
+            window.alert("Congratulations !! you Guessed it right")
+        }
+        else{
+            window.alert("Incorrect ! \nAnswer: " + str)
+        }
   
         
         
