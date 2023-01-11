@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    // Beginning pop up
+    window.alert("Lets play HANGMAN \n\nYou have 3 Lives") 
+    // Collection of words
+    var str=["apple","banana","pomegranate","pineapple"] 
+    // Choosing random word 
+    var random=Math.floor(Math.random() * str.length);  
+    // Changing into array   
+    var b=str[random].split("")  
+    
+    // Converting into hidden word
+    for(i=0;i<b.length;i++){    
+        b.splice(i,1,"_ ")
+    }
+        
+    let count=0;
+    var flag=0;
+        
+    // Loop for counting Lives(chances to guess
+    while(count<3){         
+        
+        var char=prompt("Guess the word:\n("+(3-count)+" lives left)\n\n"+ b.join(""));
+        
+        // Loop to Check character entered
+        for(i=0;i<str[random].length;i++){    
+
+            if(char==str[random][i]){
+                b.splice(i,1,str[random][i]);
+                flag=1;
+            }
+        }
+
+        // Keeping count of lives left
+        if(flag==0){        
+            count++;
+        }
+        else{
+            flag=0;
+        }
+        
+        // Converting into string
+        y=b.join("")   
+        
+        // Exiting loop if guessed right
+        if(y==str[random]){  
+            break;
+        }
+    }
+    
+    // Result (Won/lost)
+    if(y==str[random]){
+        window.alert("Congratulations !! you Guessed it right\n\nWord : "+str[random])
+    }
+    else{
+        window.alert("Incorrect !! Try again\n\nAnswer : " + str[random])
+    }
+  
+    </script>
+</body>
+</html> 
