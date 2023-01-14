@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="BrandLogo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="info">
+            <div class="overlay"></div>
+            <img src="images/mobile1.png" alt="Mobile phone" class="mobile">
+            <div id="circle">
+
+                <div class="feature one">
+                    <img src="images/camera.png" alt="Camera">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>108 MP XLSS Lens</p>
+                    </div>
+                </div>
+
+                <div class="feature two">
+                    <img src="images/processor.png" alt="Processor">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon 872 octa core</p>
+                    </div>
+                </div>
+
+                <div class="feature three">
+                    <img src="images/display.png" alt="Display">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5 inch OLED</p>
+                    </div>
+                </div>
+
+                <div class="feature four">
+                    <img src="images/battery.png" alt="Battery">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>6000 mAh Fast charge</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="images/arrow.png" alt="up-arrow" id="up">
+            <h3>Features</h3>
+            <img src="images/arrow.png" alt="Down-arrow" id="down">
+        </div>
+
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("up");
+        var downbtn = document.getElementById("down");
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        downbtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+   
+</body>
+</html>
