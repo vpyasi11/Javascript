@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="main">
+    <p id="abc">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <script>
+        var para = document.createElement('p')
+        var content = document.createTextNode("Thou shall be hardworking")
+        para.appendChild(content)
+
+        // or para.innerHTML = "TEXt to appeedn"
+        
+        var loc = document.getElementById('abc')
+        document.body.appendChild(para)
+
+        // appending inside DIv
+        var loc1 = document.getElementById("main")
+        loc1.style.background = "green"
+
+        // document.body.firstElementChild.appendChild(para) or
+        loc1.appendChild(para)
+
+        //Removing existing element
+
+            // let parent = document.getElementById("main")
+            // let child = document.getElementById("p")
+
+            // parent.removeChild(child)
+            // parent.appendChild(para)
+
+            // child.parentNode.removeChild(child)
+
+        // Replacing element
+
+        let parent = document.getElementById("main")
+        let child = document.getElementById("abc")
+        let el = document.createElement('p')
+        let cont = document.createTextNode("replacing text")
+        el.appendChild(cont)
+
+        parent.replaceChild(el, child)
+
+        // Simpler method to create, append, remove and replace
+        // Above all code summarized
+                let item = document.createElement('p')
+                item.innerHTML = "another method to add text"
+                // parent.appendChild(item)
+                // parent.removeChild(item)
+                parent.replaceChild(item,el)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Heading</h1>
+    <p id="Para">This is a para</p>
+    <p class="abc">para2</p>
+    <p class="abc">Para 3</p>
+    <p class="abc">Para 4</p>
+    <script>
+        
+        console.log(document.documentElement.getAttribute('lang'))
+        console.log(document.head.firstElementChild.nodeType)
+        console.log(document.body.firstElementChild.nodeName)
+
+        var loc = document.getElementById("Para")
+        loc.style.background = "green"
+
+        var loc1 = document.getElementsByClassName("abc")
+        loc1[0].style.background = "red"
+
+        loc1[loc1.length-1].style.background = "orange"
+
+        for(var i in loc1){
+            loc1[i].style.fontWeight = "bold"
+        }
+
+    </script>
+</body>
+</html>

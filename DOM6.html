@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="first" id="main">Hello World!</div>
+    <a id="link" href="www.herovired.com">main site</a>
+
+    <script>
+        var loc = document.getElementById('main')
+        loc.className = "second" // modify class name
+
+        var loc1 = document.getElementsByClassName("second")
+        loc1[0].style.background = "lightseagreen" 
+
+        loc.classList.add("third","fourth") //add other class name
+        loc.classList.remove("third") //remove class name
+        loc.classList.toggle("fifth") // if exist it remove, if not it adds class name
+
+        // Get/Set atttribute
+
+        var a = document.getElementById("link")
+        console.log(a.getAttribute("href"))
+
+        a.setAttribute("href","www.google.com")
+        console.log(a.getAttribute("href"))
+
+        a.href = "www.youtube.com"
+        console.log(a.getAttribute("href"))
+
+    </script>
+</body>
+</html>

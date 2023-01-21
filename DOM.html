@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Learning DOM</h1>
+    <p id="firstp">This would be fun</p>
+    <div>
+        <h1>another heading</h1>
+        <p>another paragraph</p>
+    </div>
+    <button onclick="random()">Click me</button><br><br> -->
+
+    <!-- Number 1:<input type="text" id="inp1"><br>
+    Number 2:<input type="text" id="inp2"><br>
+    <p id="product">Output:</p>
+
+    <button onclick="calc()">Click me</button>
+
+    <script src="script.js"></script> -->
+
+
+
+
+        
+
+        Number 1:<input type="text" id="inp1"><br>
+        Number 2:<input type="text" id="inp2"><br>
+
+        <div class="samp">TAble</div>
+
+        <button onclick="table()">Click me</button>
+
+    <script>
+    //     function myFun(){
+    //         let el= document.createElement("h1")
+    //         el.innerHTML = "Vishu"
+    //          let parentel= document.getElementById("samp")
+    //          parentel.appendChild(el)
+    //         console.log(el)        
+    // }
+
+        function table(){
+                console.log("this is table fun((")
+                var a=document.getElementById("inp1")
+                var b=document.getElementById("inp2")
+                var product = document.getElementById("samp")
+
+            for(let i=1;i<=parseInt(b.value);i++){
+                console.log(i)
+                var el = document.createElement("p")
+                console.log(el)
+               
+                el.innerHTML = (parseInt(a.value)*i)
+                product.appendChild(el)
+            
+
+            }
+        }
+// Anuj Code
+
+//         function tablefun() {
+//     let inp1 = document.getElementById("inp1")
+//     let inp2 = document.getElementById("inp2")
+//     let output = document.getElementById("output")
+//     for(let i=1; i<=parseInt(inp2.value); i++) {
+//         const temp = document.createElement("p")
+//         temp.innerHTML = `${inp1.value} * ${i} = ${parseInt(inp1.value) * i}`
+//         output.appendChild(temp)
+//     }
+// }
+
+    </script>
+</body>
+</html>
