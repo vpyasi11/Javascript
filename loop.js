@@ -11,11 +11,11 @@ while(i<=10){
 //Print 5 multiples of a number
 let a=prompt(parseInt("Enter Any Number: "))
 
-let i=1;
-while(i<=5){
-    a=a*i;
+let j=1;
+while(j<=5){
+    a=a*j;
     console.log(a);
-    i++;
+    j++;
 }
 
 for(i=1;i<=5;i++){
