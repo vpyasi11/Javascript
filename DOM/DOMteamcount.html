@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i=1
+        let count = 0
+        let num = prompt("Enter number of teams")
+        let run = document.createElement("p")
+
+        function score(){
+            count++
+            run.innerHTML = count
+            document.body.appendChild(run)
+        }
+
+        while(i<=num){
+            let btn = document.createElement("button")
+            btn.innerHTML = "Team" + i
+            document.body.appendChild(btn)
+            i++
+        }
+        btn.onclick = score()
+    </script>
+</body>
+</html>
