@@ -17,15 +17,23 @@
             count++
             run.innerHTML = count
             document.body.appendChild(run)
+            
         }
 
         while(i<=num){
             let btn = document.createElement("button")
+            btn.classList.add("btn")
+            btn.onclick = score
             btn.innerHTML = "Team" + i
             document.body.appendChild(btn)
             i++
         }
-        btn.onclick = score()
+        
+        let b = document.getElementsByClassName("btn")
+        
+        
+        
+        
     </script>
 </body>
 </html>
