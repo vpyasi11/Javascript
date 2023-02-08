@@ -12,7 +12,7 @@ class linkedList{
         this.length = 1;
     }
 
-    // Add node a tail
+    // Add node as tail
 
     append(value){
         const newNode = new node(value);
@@ -108,7 +108,7 @@ class linkedList{
             arr.push(currentNode.value);
             currentNode = currentNode.next;
         }
-        return arr.join(" - ")
+        return arr
     }
 
     search(key){
@@ -135,12 +135,91 @@ l1.prepend(49);
 // console.log(l1);
 
 l1.insert(1, 100);
-
 // console.log(l1);
 
-console.log(l1.print());
+// console.log(l1.print());
 
 l1.delete(1)
-console.log(l1.print());
-console.log(l1.search(50))
-console.log(l1.search(19))
+// console.log(l1.print());
+// console.log(l1.search(50))
+// console.log(l1.search(19))
+
+
+
+let l2 = new linkedList(10);
+l2.append(20);
+l2.append(30);
+l2.append(40);
+l2.append(50);
+// console.log(l2.print())
+
+let l3 = new linkedList(10);
+l3.append(20);
+l3.append(30);
+l3.append(40);
+l3.append(50);
+l3.append(20);
+l3.append(30);
+l3.append(40);
+l3.append(50);
+// console.log(l3.print())
+
+// Write a function to check if the given two linked lists are identical
+
+function identical(a,b){
+    if(a.length == b.length){
+
+        // Returns array of elements
+        const arr1 = a.print();
+        const arr2 = b.print();
+
+        if(arr1.join() == arr2.join()) return true
+        else return false
+
+    }
+    else return false
+}
+
+// console.log(identical(l2,l3))
+
+/* Given a sorted linked list which has some duplicate elements, 
+ your task is to remove all the duplicate elements from the given Linked List. */
+
+function duplicates(list){
+    const arr = list.print()
+    const arr1 = []
+    var duplicate = 0
+    arr.forEach(element => {
+        if(arr1.includes(element)){
+            duplicate++ // count no. of duplicates removed
+        }
+        else{
+            arr1.push(element)
+        }
+    });
+    const li = new linkedList(arr1[0])
+    for(i=1;i<arr1.length;i++) li.append(arr1[i])
+    list = li
+    console.log(list.print())
+    return list
+}
+
+l3 = duplicates(l3)
+// console.log(l3)
+
+// Given the head of a singly linked list, reverse the list, and return the reversed list
+
+function reverse(list){
+    const arr = list.print()
+    let temp = []
+    for(i=arr.length-1;i>=0;i--){
+        temp[i] = arr[arr.length-i-1]
+    }
+    const li = new linkedList(temp[0])
+    for(i=1;i<temp.length;i++) li.append(temp[i])
+    list = li
+    console.log(list)
+    return list
+}
+
+l3 = reverse(l3)
