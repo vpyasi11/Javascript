@@ -223,3 +223,4 @@ function reverse(list){
 }
 
 l3 = reverse(l3)
+// console.log(l3)

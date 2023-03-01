@@ -17,3 +17,5 @@ const quickSort = (arr) =>{
 
 const a = [3,5,15,1,45,87,11]
 console.log(quickSort(a))
+
+// complexity of n log(n) but relatively not stable
