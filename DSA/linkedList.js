@@ -164,6 +164,14 @@ l3.append(40);
 l3.append(50);
 // console.log(l3.print())
 
+
+
+
+
+
+
+
+
 // Write a function to check if the given two linked lists are identical
 
 function identical(a,b){

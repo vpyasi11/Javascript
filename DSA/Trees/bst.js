@@ -157,9 +157,25 @@ class BinarySearchTree{
     }
 
     remove(value){
-        for(var curr = this.root; curr.value !== value; curr = curr.right){
-            if(curr.right.value == value) curr.right.value = null
+       
+        var curr = this.root
+        while(curr){
+            if(curr.left.value == value){
+                curr.left.value = null
+                break
+            }
+            if(curr.right.value == value){
+                curr.right.value = null
+                break
+            }
+            if(value < curr.value){
+                curr = curr.left;
+            }
+            else{
+                curr = curr.right;
+            }
         }
+        return this
     }
 }
 
@@ -180,8 +196,8 @@ t1.insert(100);
 // t1.remove(65);
 
 // console.log("Inorder:")
-// console.log(t1.inorder(t1.root))
-// console.log(t1.arr)
+t1.inorder(t1.root)
+console.log(t1.arr)
 // console.log("Preorder:")
 // console.log(t1.preorder(t1.root))
 // console.log("Postorder:")
@@ -190,4 +206,7 @@ t1.insert(100);
 // console.log(t1.arrTree());
 // console.log(t1.nthlargest(4))
 
-t1.remove(100)
+t1.remove(60)
+// console.log(t1)
+t1.inorder(t1.root)
+console.log(t1.arr)
