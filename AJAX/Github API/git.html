@@ -5,12 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style> 
+       
+       *{
+        box-sizing: border-box;
+       }
+       body{
+        background-color: #000000;
+        color: #fff;
+        font-family: 'Poppins',sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+       }
+       .user-form{
+        /* width: 100%; */
+        max-width: 700px;
+       }
+       .user-form input{
+        width: 400px;
+        display: block;
+        border: none;
+        border-radius: 10px;
+        color: darkblue;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        font-family: inherit;
+        font-size: 1rem;
+        box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0,0,0,0.1);
+       }
+       .user-form input::placeholder{
+        color: darkblue;
+       }
+
+       #main{
+        display: flex;
+        border: 1px solid white;
+        /* padding: 10px; */
+        display: none;
+        margin: 15px;
+       }
+       img{
+        width: 200px;
+        height: 200px;
+        /* padding: 10px; */
+       }
+       #data{
+        /* background-color: blue; */
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+
+       }
+       form + button{
+        padding: 10px;
+        margin: 10px;
+        width: 100px;
+        background-color: darkblue;
+        color: white;
+        border-radius: 10px;
+        border: 1px solid white;
+       }
+       #details{
+        padding:15px;
+       }
+       #details button{
+        /* color: red; */
+        padding: 5px;
+        margin: 5px;
+        /* width: 150px; */
+        background-color: darkblue;
+        color: white;
+       }
+       /* *{
+        border: 1px solid red;
+       } */
+
+        /* table,tr,td,caption{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            
+        }
+        table caption{
+            font-weight: bold;
+        } */
+        </style>
 </head>
 <body>
+
+    <form class = "user-form" id = "form">
+        <input type="text" id = "search" placeholder="Enter the name of github user you are looking for" value="">
+    </form>
     <button onclick="load()">Load</button>
-    <table id = "t1">
+
+    <main id="main">
+        <img src="" id="pic" alt="">
+        <div id="details">
+            <p id="name"></p>
+            <!-- <p id ="location"></p> -->
+            <div id="data">
+                <p id ="followers"></p>
+                <p id ="following"></p>
+                <p id ="repos"></p>
+            </div>
+        </div>
+    </main>
+
+    
+    <!-- <table id = "table">
         
-    </table>
+    </table> -->
     <script src="git.js"></script>
 </body>
 </html>

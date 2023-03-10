@@ -16,4 +16,5 @@ function load() {
   };
   xhttp.open("GET", "https://api.github.com/users", true);
   xhttp.send();
+  
 }
