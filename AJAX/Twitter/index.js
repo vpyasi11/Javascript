@@ -1,8 +1,8 @@
 var blogs = document.getElementById("data")
 
-// blogs.addEventListener("scroll",load)
+blogs.addEventListener("wheel",load)
 
-blogs.onscroll = function(){
+function load(){
     console.log("yes")
     // step1: create XML object to server
     var xhttp = new XMLHttpRequest();
