@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "otpless-js-sdk": "^2.1.1"
+  }
+}
